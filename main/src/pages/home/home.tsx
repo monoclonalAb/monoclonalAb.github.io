@@ -74,14 +74,16 @@ export const HomePage = () => {
         </svg>
       </header>
       
-      <div className={styles.backgroundWave}>
-        <svg viewBox="130 160 1500 800">
-          <image className={ styles.wave } width="120%" height = "120%" href={ svgs.wave1 } />
-          <image className={ styles.wave } width="120%" height = "120%" href={ svgs.wave2 } />
-          <image className={ styles.wave } width="120%" height = "120%" href={ svgs.wave3 } />
-          <image className={ styles.wave } width="120%" height = "120%" href={ svgs.wave4 } />
-          <image className={ styles.wave } width="120%" height = "120%" href={ svgs.wave5 } />
-        </svg>
+      <div className={styles.placeholder}>
+        <div className={styles.backgroundWave} style={{transform: "translate(0, 30.2vh)"}}>
+          <svg viewBox="130 160 1500 800">
+            <image className={ styles.wave } width="120%" height = "120%" href={ svgs.wave1 } />
+            <image className={ styles.wave } width="120%" height = "120%" href={ svgs.wave2 } />
+            <image className={ styles.wave } width="120%" height = "120%" href={ svgs.wave3 } />
+            <image className={ styles.wave } width="120%" height = "120%" href={ svgs.wave4 } />
+            <image className={ styles.wave } width="120%" height = "120%" href={ svgs.wave5 } />
+          </svg>
+        </div>
       </div>
 
       <div id="About" className = {classNames(`container-fluid`, styles.about)}> 
@@ -100,8 +102,8 @@ export const HomePage = () => {
         </div>
       </div>
       
-      <div className = {styles.placeholder}>
-        <div className = {styles.upsideDownBackgroundWave}>
+      <div className = {styles.placeholder} style={{backgroundColor: "#D7F5E9"}}>
+        <div className = {styles.upsideDownBackgroundWave} style={{transform: "rotate(0.5turn)"}}>
           <svg viewBox="130 160 1500 800" style={{position: "absolute"}}>
             <image className={ styles.wave } width="120%" height = "120%" href={ svgs.wave1 } />
             <image className={ styles.wave } width="120%" height = "120%" href={ svgs.wave2 } />
