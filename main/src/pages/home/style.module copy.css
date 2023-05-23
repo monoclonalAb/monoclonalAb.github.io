@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  background: #d2f4ea;
+}
+
+.background {
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 100vh;
+  width: 100vw;
+}
+
+@keyframes text_gradient {
+  0% {
+  }
+}
+
+@keyframes eric_gradient {
+  0% {
+    background-position: 20% 50%;
+  }
+  50% {
+    background-position: 80% 50%;
+  }
+  100% {
+    background-position: 20% 50%;
+  }
+}
+
+.eric {
+  --bg-size: 400%;
+  --color-one: #d2f4ea;
+  --color-two: #006666;
+  background: linear-gradient(20deg, var(--color-one), var(--color-two), var(--color-one)) 0 0 / var(--bg-size) 100%;
+  animation: eric_gradient 5s ease infinite;
+  position: absolute;
+  z-index: 1;
+  width: 80%;
+  height: 80%;
+
+  left: 10%;
+  top: 20%; 
+}
+
+.svg_eric {
+  mask: url(../../assets/eric.svg);
+  mask-repeat: no-repeat;
+  mask-size: auto;
+}
+
+@keyframes zheng_gradient {
+  0% {
+    background-position: 0% 30%;
+  }
+  50% {
+    background-position: 60% 30%;
+  }
+  100% {
+    background-position: 0% 30%;
+  }
+}
+
+.zheng {
+  --bg-size: 400%;
+  --color-one: #d2f4ea;
+  --color-two: #006666;
+  background: linear-gradient(20deg, var(--color-one), var(--color-two), var(--color-one)) 0 0 / var(--bg-size) 100%;
+  animation: zheng_gradient 5s ease infinite;
+  position: absolute;
+  z-index: 1;
+  width: 80%;
+  height: 80%;
+
+  height: 80%;
+  width: 80%;
+
+  left: 20%;
+  top: 50%;
+}
+
+.svg_zheng {
+  mask: url(../../assets/zheng.svg);
+  mask-repeat: no-repeat;
+  mask-size: auto;
+}
+
+.title {
+  color: #ffffff;
+  position: absolute;
+  font-size: 3.3vw;
+  letter-spacing: 0.11vw;
+
+  width: 50vw;
+
+  top: 17vh;
+  left: 10.3vw;
+
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+}
+
+.paragraph {
+  color: #ffffff;
+  position: absolute;
+
+  font-size: 2.05vw;
+  line-height: 4.3vh;
+  letter-spacing: 0.05vw;
+
+  height: auto;
+  width: 36vw;
+
+  top: 28vh;
+  left: 10.4vw;
+
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+}
+
+.intro_button {
+  position: absolute;
+  left: 22vw;
+  top: 69vh;
+}
