@@ -3,7 +3,6 @@ import { useNavigate } from "react-router";
 import classNames from "classnames";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import * as svgs from "../../assets/svg";
-import Button from "../../components/Button"
 
 export const HomePage = () => {
   const navigate = useNavigate();
@@ -11,19 +10,11 @@ export const HomePage = () => {
     navigate('/example');
   }; */
   return (
-    <div className={classNames(`cover-container-fluid`, styles.header)}>
+    <div style={{backgroundColor: "#E4F8F0"}} className={classNames(`cover-container-fluid`, styles.entireDiv)}>
       <title>Eric Zheng</title>
-      <div className={styles.backgroundWave}>
-        <svg viewBox="0 0 1500 800" width="600%" height="100%" style={{left:"50%", transform: "translate(-68%, 28%)"}}>
-          <image className={ styles.wave } width="300%" height = "100%" href={ svgs.wave1 } />
-          <image className={ styles.wave } width="300%" height = "100%" href={ svgs.wave2 } />
-          <image className={ styles.wave } width="300%" height = "100%" href={ svgs.wave3 } />
-          <image className={ styles.wave } width="300%" height = "100%" href={ svgs.wave4 } />
-          <image className={ styles.wave } width="300%" height = "100%" href={ svgs.wave5 } />
-        </svg>
-      </div>
       
-      <header style={{height: "100vh"}} className={classNames(styles.background, `cover-container-fluid`)}>
+      
+      <header className={classNames(styles.header, `cover-container-fluid`)}>
         {/* MAIN LOGO with lineTop, lineBottom, cursorAnimation and navigation bar */}
         <svg className={ styles.logo } xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" height="100%" width="100%" viewBox="0 0 365 156">
           <g className={ styles.Eric }>  
@@ -57,17 +48,17 @@ export const HomePage = () => {
             
             
             <a href = "#About">
-              <text font-size="5px" fill="#1aa179" x="240" y="62">
+              <text font-size="5px" fill="#1aa179" x="242" y="62">
                 About
               </text>
             </a>
             <a href = "#Projects">
-              <text font-size="5px" fill="#1aa179" x="261" y="62">
+              <text font-size="5px" fill="#1aa179" x="264" y="62">
                 Projects
               </text>
             </a>
             <a href   = "#Contact">
-              <text font-size="5px" fill="#1aa179" x="289" y="62">
+              <text font-size="5px" fill="#1aa179" x="290" y="62">
                 Contact
               </text>
             </a>
@@ -82,21 +73,73 @@ export const HomePage = () => {
           </g>
         </svg>
       </header>
+      
+      <div className={styles.backgroundWave}>
+        <svg viewBox="130 160 1500 800">
+          <image className={ styles.wave } width="120%" height = "120%" href={ svgs.wave1 } />
+          <image className={ styles.wave } width="120%" height = "120%" href={ svgs.wave2 } />
+          <image className={ styles.wave } width="120%" height = "120%" href={ svgs.wave3 } />
+          <image className={ styles.wave } width="120%" height = "120%" href={ svgs.wave4 } />
+          <image className={ styles.wave } width="120%" height = "120%" href={ svgs.wave5 } />
+        </svg>
+      </div>
 
-      <div id="#About" className = {classNames(`container-fluid`, styles.About)}> 
-          <div className={ `container-xs col-sm-7 mx-auto mt-3 pt-3 pb-3 mb-3 text-md-left` }>
-            <svg className={ `mb-3 bi bi-paragraph` } xmlns="http://www.w3.org/2000/svg" width="75px" height="75px" fill="#06281e" viewBox="0 0 16 16">
-              <path d="M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-              <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2v9.255S12 12 8 12s-5 1.755-5 1.755V2a1 1 0 0 1 1-1h5.5v2z"/>
+      <div id="About" className = {classNames(`container-fluid`, styles.about)}> 
+        <div className={ `container-xs col-sm-7 mx-auto mt-3 pt-3 pb-3 mb-3 text-md-left` }>
+          <svg className={ `mb-3 bi bi-paragraph` } xmlns="http://www.w3.org/2000/svg" width="75px" height="75px" fill="#06281e" viewBox="0 0 16 16">
+            <path d="M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+            <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2v9.255S12 12 8 12s-5 1.755-5 1.755V2a1 1 0 0 1 1-1h5.5v2z"/>
+          </svg>
+          <h3 className={ `display-5 mb-3 fw-semibold lh-sm` }>About Me:</h3>
+          <h4>Hi, my name is Eric Zheng.</h4>
+          <br></br>
+          <p className={ `fw-normal mb-5 ` }>
+            I am a <b>first-year Computer Science student</b> at the <strong>University of Auckland</strong> who is interested in exploring opportunities in <b>Big Tech</b> or <b>fintech</b> in the future. <br/><br/> 
+            Outside of university, you will most likely find me on the <b>4th floor of <a style={{color: "#0d503c"}} href="https://www.library.auckland.ac.nz/about-us/information-commons/kate-edger" rel="noreferrer" target="_blank">Kate Edger</a></b> or <b>any UOA study space</b> in general, working on side projects. Currently, I am working on <b>finishing this website</b>, before starting an <b>algorithmic trader using AlpacaAPI</b>. 
+          </p>
+        </div>
+      </div>
+      
+      <div className = {styles.placeholder}>
+        <div className = {styles.upsideDownBackgroundWave}>
+          <svg viewBox="130 160 1500 800" style={{position: "absolute"}}>
+            <image className={ styles.wave } width="120%" height = "120%" href={ svgs.wave1 } />
+            <image className={ styles.wave } width="120%" height = "120%" href={ svgs.wave2 } />
+            <image className={ styles.wave } width="120%" height = "120%" href={ svgs.wave3 } />
+            <image className={ styles.wave } width="120%" height = "120%" href={ svgs.wave4 } />
+            <image className={ styles.wave } width="120%" height = "121%" href={ svgs.wave5 } />
+          </svg>
+        </div>
+      </div>
+
+      <div id="Projects" className = {classNames(`container-fluid`, styles.projects)}> 
+        <div className={ `container-xs col-sm-7 mx-auto mt-3 pt-3 pb-3 mb-3 text-md-left` }>
+          <svg className={`mb-3 bi bi-paragraph`} xmlns="http://www.w3.org/2000/svg" width="75px" height="75px" fill="#06281e" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M8.646 5.646a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L10.293 8 8.646 6.354a.5.5 0 0 1 0-.708zm-1.292 0a.5.5 0 0 0-.708 0l-2 2a.5.5 0 0 0 0 .708l2 2a.5.5 0 0 0 .708-.708L5.707 8l1.647-1.646a.5.5 0 0 0 0-.708z"/>
+              <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z"/>
+              <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z"/>
             </svg>
-            <h3 className={ `display-5 mb-3 fw-semibold lh-sm` }>About Me:</h3>
-            <h4>Hi, my name is Eric Zheng.</h4>
-            <br></br>
-            <p className={ `fw-normal mb-5 ` }>
-              I am a <b>first-year Computer Science student</b> at the <strong>University of Auckland</strong> who is interested in exploring opportunities in <b>Big Tech</b> or <b>fintech</b> in the future. <br/><br/> 
-              Outside of university, you will most likely find me on the <b>4th floor of <a style={{color: "#0d503c"}} href="https://www.library.auckland.ac.nz/about-us/information-commons/kate-edger" rel="noreferrer" target="_blank">Kate Edger</a></b> or any <b>UOA library</b> in general, working on side projects. Currently, I am working on <b>finishing this website</b>, before starting an <b>algorithmic trader using AlpacaAPI</b>. 
-            </p>
-          </div>
+          <h3 className={ `display-5 mb-3 fw-semibold lh-sm` }>Projects:</h3>
+          <h4>Hi, my name is Eric Zheng.</h4>
+          <br></br>
+          <p className={ `fw-normal mb-5 ` }>
+            Under Construction!
+          </p>
+        </div>
+      </div>
+      
+      <div id="Contacts" className = {classNames(`container-fluid`, styles.Projects)}> 
+        <div className={ `container-xs col-sm-7 mx-auto mt-3 pt-3 pb-3 mb-3 text-md-center` }>
+          <svg className={ `mb-3 bi bi-paragraph` } xmlns="http://www.w3.org/2000/svg" width="75px" height="75px" fill="#06281e" viewBox="0 0 16 16">
+            <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+          </svg>
+          <h3 className={ `display-5 mb-3 fw-semibold lh-sm` }>Contacts:</h3>
+          <h4>Thanks for visiting!</h4>
+          <p className={ `fw-normal mb-5 ` }>
+            Send a connection request on linkedin or flick me an email! <br/>
+            also under contruction lol
+          </p>
+        </div>
       </div>
     </div>
   );

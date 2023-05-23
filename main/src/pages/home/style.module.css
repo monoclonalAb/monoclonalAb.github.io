@@ -67,7 +67,7 @@
       opacity: 0%;
       transform: translate(-344px, 100px) scale(2);
     }
-    80% {
+    90% {
       opacity: 0%;
     }
     100%{
@@ -349,7 +349,7 @@
       opacity: 0%;
       transform: translate(0px, 100px);
     }
-    80% {
+    90% {
       opacity: 0%;
     }
     100%{
@@ -645,7 +645,7 @@ p{
     background-position: 0% 50%;
   }
 }
-
+/*
 .background{
   background: 
     linear-gradient(to right, #d2f4ea, #a6e9d5) top,
@@ -657,21 +657,33 @@ p{
     background-repeat: repeat;
     animation: background_gradient 10s linear infinite;
 }
-
+*/
 /*Header Area*/
-.header{
+.entireDiv{
   height: 100vh;
   width: 100vw;
   position: relative; 
   overflow-x: hidden; 
+  background-color: "green";
 }
 
 /*Wave Animation*/
 .backgroundWave{
   position: absolute;
-  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-self: self-end;
+  align-items: flex-end;
+  z-index: 3;
+  transform: translate(0, -19vh);
   width: 100vw;
+  height: 20vh;
+}
+
+.header{
   height: 100vh;
+  position: relative;
+  z-index: 10;
 }
 
 .wave{
@@ -738,7 +750,8 @@ p{
 
 /* Navigation Bar Items */
 .navItem{
-  font-family: "Open Sans"; 
+  font-family: "Open Sans";
+  font-weight: 600; 
   opacity: 0%;
   animation: text_rising 2.8s ease-in-out forwards;
 }
@@ -747,10 +760,17 @@ p{
   text-decoration-line: none !important;
 }
 
-.navItem a:hover, text:hover{
+.navItem a:hover{
   z-index: 3;
-  opacity: 85%;
+  opacity: 75%; 
+}
+
+.navItem text:hover{
+  z-index: 3;
+  opacity: 75%;
   text-decoration-line: underline;
+  font-weight: 700;
+  transform: translateX(-0.05%);
 }
 
 .navItem a:focus-visible{
@@ -761,7 +781,7 @@ p{
 
 
 /* About page properties */
-.About{
+.about{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -771,11 +791,36 @@ p{
   background-color: #66a693;
 }
 
+/* placeholder page properties */
+
+.placeholder{
+  position: relative;
+  height: 50vh;
+  width: 100vw;
+  background-color: #D7F5E9;
+}
+
+.upsideDownBackgroundWave{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-self: self-end;
+  align-items: flex-end;
+  z-index: 3;
+  transform: translate(0, -0vh) rotate(0.5turn);
+  width: 100vw;
+  height: 20vh;
+}
+
 /* Projects page properties */
 
-#Projects{
+.projects{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   position: relative; 
-  background-color: #66a693;
+  background-color: #D7F5E9;
   overflow-x:hidden; 
   text-align: right;
 }
