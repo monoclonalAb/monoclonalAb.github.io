@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+.container{
+  background-color: white;
+
+  position: relative;
+  transform: translate(-50%, 0%);
+  
+  display: flex;
+  align-items: center;
+  text-align: left;
+
+  height: 81vh;
+  max-height: 54vw;
+  width: 144vh;
+  max-width: 96vw;  
+}
+
+.container::before{
+  content: " ";
+  background-color: #06281e;
+  opacity: 50%;
+
+  position: absolute;
+  z-index: 1;
+
+  height: 100%;
+  width: 100%;
+}
+
+.title{
+  position: absolute;
+  z-index: 2;
+  
+  width: 80%;
+
+  color: #E4F8F0;
+  font-size: min(6vh, 9vw);
+  font-family: "Open Sans";
+  font-weight: 900;
+
+  left: 10%;
+}
+
+.duration{
+  position: absolute;
+  z-index: 2;
+
+  width: 80%;
+
+  color: #E4F8F0;
+  font-size: min(3vh, 4.5vw);
+  font-weight: 500;
+}
